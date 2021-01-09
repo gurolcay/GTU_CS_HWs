@@ -1,0 +1,4 @@
+bu directory içerisindeki file'in adi folder1file ve içersiinde 5 adet
+test
+kelimesi var
+bu bir test bu iki test bu üç test bu da besş test

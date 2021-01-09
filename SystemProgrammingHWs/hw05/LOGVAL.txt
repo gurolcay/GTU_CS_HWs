@@ -1,0 +1,224 @@
+==20431== Memcheck, a memory error detector
+==20431== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==20431== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==20431== Command: ./exe data.dat
+==20431== Parent PID: 20430
+==20431== 
+--20431-- 
+--20431-- Valgrind options:
+--20431--    -v
+--20431--    --log-file=LOGVAL.txt
+--20431--    --tool=memcheck
+--20431--    --leak-check=yes
+--20431--    --show-reachable=yes
+--20431--    --track-origins=yes
+--20431-- Contents of /proc/version:
+--20431--   Linux version 4.15.0-22-generic (buildd@lgw01-amd64-013) (gcc version 7.3.0 (Ubuntu 7.3.0-16ubuntu3)) #24-Ubuntu SMP Wed May 16 12:15:17 UTC 2018
+--20431-- 
+--20431-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-avx-avx2-bmi
+--20431-- Page sizes: currently 4096, max supported 4096
+--20431-- Valgrind library directory: /usr/lib/valgrind
+--20431-- Reading syms from /home/gurol/Documents/Lessons/System Programming/hw05/exe
+--20431-- Reading syms from /lib/x86_64-linux-gnu/ld-2.27.so
+--20431--   Considering /lib/x86_64-linux-gnu/ld-2.27.so ..
+--20431--   .. CRC mismatch (computed 1b7c895e wanted 2943108a)
+--20431--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.27.so ..
+--20431--   .. CRC is valid
+--20431-- Reading syms from /usr/lib/valgrind/memcheck-amd64-linux
+--20431--   Considering /usr/lib/valgrind/memcheck-amd64-linux ..
+--20431--   .. CRC mismatch (computed 62965bbf wanted eeb84137)
+--20431--    object doesn't have a symbol table
+--20431--    object doesn't have a dynamic symbol table
+--20431-- Scheduler: using generic scheduler lock implementation.
+--20431-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==20431== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-20431-by-gurol-on-???
+==20431== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-20431-by-gurol-on-???
+==20431== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-20431-by-gurol-on-???
+==20431== 
+==20431== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==20431== don't want to do, unless you know exactly what you're doing,
+==20431== or are doing some strange experiment):
+==20431==   /usr/lib/valgrind/../../bin/vgdb --pid=20431 ...command...
+==20431== 
+==20431== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==20431==   /path/to/gdb ./exe
+==20431== and then give GDB the following command
+==20431==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=20431
+==20431== --pid is optional if only one valgrind process is running
+==20431== 
+--20431-- REDIR: 0x401f2f0 (ld-linux-x86-64.so.2:strlen) redirected to 0x58060901 (???)
+--20431-- REDIR: 0x401f0d0 (ld-linux-x86-64.so.2:index) redirected to 0x5806091b (???)
+--20431-- Reading syms from /usr/lib/valgrind/vgpreload_core-amd64-linux.so
+--20431--   Considering /usr/lib/valgrind/vgpreload_core-amd64-linux.so ..
+--20431--   .. CRC mismatch (computed 13d5e98a wanted 1786ecf1)
+--20431--    object doesn't have a symbol table
+--20431-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so
+--20431--   Considering /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so ..
+--20431--   .. CRC mismatch (computed 8f77ef36 wanted fcbde737)
+--20431--    object doesn't have a symbol table
+==20431== WARNING: new redirection conflicts with existing -- ignoring it
+--20431--     old: 0x0401f2f0 (strlen              ) R-> (0000.0) 0x58060901 ???
+--20431--     new: 0x0401f2f0 (strlen              ) R-> (2007.0) 0x04c32db0 strlen
+--20431-- REDIR: 0x401d360 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c33ee0 (strcmp)
+--20431-- REDIR: 0x401f830 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c374f0 (mempcpy)
+--20431-- Reading syms from /lib/x86_64-linux-gnu/librt-2.27.so
+--20431--   Considering /lib/x86_64-linux-gnu/librt-2.27.so ..
+--20431--   .. CRC mismatch (computed 16979484 wanted f9e041e3)
+--20431--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/librt-2.27.so ..
+--20431--   .. CRC is valid
+--20431-- Reading syms from /lib/x86_64-linux-gnu/libm-2.27.so
+--20431--   Considering /lib/x86_64-linux-gnu/libm-2.27.so ..
+--20431--   .. CRC mismatch (computed 7feae033 wanted b29b2508)
+--20431--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libm-2.27.so ..
+--20431--   .. CRC is valid
+--20431-- Reading syms from /lib/x86_64-linux-gnu/libpthread-2.27.so
+--20431--   Considering /usr/lib/debug/.build-id/28/c6aade70b2d40d1f0f3d0a1a0cad1ab816448f.debug ..
+--20431--   .. build-id is valid
+--20431-- Reading syms from /lib/x86_64-linux-gnu/libc-2.27.so
+--20431--   Considering /lib/x86_64-linux-gnu/libc-2.27.so ..
+--20431--   .. CRC mismatch (computed b1c74187 wanted 042cc048)
+--20431--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.27.so ..
+--20431--   .. CRC is valid
+--20431-- REDIR: 0x569fc70 (libc.so.6:memmove) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569ed40 (libc.so.6:strncpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569ff50 (libc.so.6:strcasecmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569e790 (libc.so.6:strcat) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569ed70 (libc.so.6:rindex) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x56a17c0 (libc.so.6:rawmemchr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569fde0 (libc.so.6:mempcpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569fc10 (libc.so.6:bcmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569ed00 (libc.so.6:strncmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569e800 (libc.so.6:strcmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569fd40 (libc.so.6:memset) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x56bd0f0 (libc.so.6:wcschr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569eca0 (libc.so.6:strnlen) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569e870 (libc.so.6:strcspn) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569ffa0 (libc.so.6:strncasecmp) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569e840 (libc.so.6:strcpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x56a00e0 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569eda0 (libc.so.6:strpbrk) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569e7c0 (libc.so.6:index) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569ec70 (libc.so.6:strlen) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x56a96c0 (libc.so.6:memrchr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569fff0 (libc.so.6:strcasecmp_l) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569fbe0 (libc.so.6:memchr) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x56bdeb0 (libc.so.6:wcslen) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569f050 (libc.so.6:strspn) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569ff20 (libc.so.6:stpncpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x569fef0 (libc.so.6:stpcpy) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x56a17f0 (libc.so.6:strchrnul) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x56a0040 (libc.so.6:strncasecmp_l) redirected to 0x4a2a6e0 (_vgnU_ifunc_wrapper)
+--20431-- REDIR: 0x578f3c0 (libc.so.6:__strrchr_avx2) redirected to 0x4c32730 (rindex)
+--20431-- REDIR: 0x569b030 (libc.so.6:calloc) redirected to 0x4c31a70 (calloc)
+--20431-- REDIR: 0x578f590 (libc.so.6:__strlen_avx2) redirected to 0x4c32cf0 (strlen)
+--20431-- REDIR: 0x577c950 (libc.so.6:__strcpy_ssse3) redirected to 0x4c32dd0 (strcpy)
+==20431== Invalid write of size 1
+==20431==    at 0x4C32E0D: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20431==    by 0x1090EC: main (in /home/gurol/Documents/Lessons/System Programming/hw05/exe)
+==20431==  Address 0x59f2108 is 0 bytes after a block of size 8 alloc'd
+==20431==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20431==    by 0x1090C5: main (in /home/gurol/Documents/Lessons/System Programming/hw05/exe)
+==20431== 
+--20431-- REDIR: 0x578ff50 (libc.so.6:__memset_avx2_unaligned_erms) redirected to 0x4c365d0 (memset)
+--20431-- REDIR: 0x5698070 (libc.so.6:malloc) redirected to 0x4c2faa0 (malloc)
+==20431== Syscall param openat(filename) points to unaddressable byte(s)
+==20431==    at 0x5710C8E: open (open64.c:47)
+==20431==    by 0x568D589: _IO_file_open (fileops.c:189)
+==20431==    by 0x568D589: _IO_file_fopen@@GLIBC_2.2.5 (fileops.c:281)
+==20431==    by 0x567FEA9: __fopen_internal (iofopen.c:78)
+==20431==    by 0x567FEA9: fopen@@GLIBC_2.2.5 (iofopen.c:89)
+==20431==    by 0x10916D: main (in /home/gurol/Documents/Lessons/System Programming/hw05/exe)
+==20431==  Address 0x59f2108 is 0 bytes after a block of size 8 alloc'd
+==20431==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20431==    by 0x1090C5: main (in /home/gurol/Documents/Lessons/System Programming/hw05/exe)
+==20431== 
+--20431-- REDIR: 0x569f590 (libc.so.6:__GI_strstr) redirected to 0x4c37760 (__strstr_sse2)
+--20431-- REDIR: 0x578f1d0 (libc.so.6:__strchrnul_avx2) redirected to 0x4c37020 (strchrnul)
+==20431== Invalid read of size 1
+==20431==    at 0x4C32D04: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20431==    by 0x565E4D2: vfprintf (vfprintf.c:1643)
+==20431==    by 0x5665E53: fprintf (fprintf.c:32)
+==20431==    by 0x109289: main (in /home/gurol/Documents/Lessons/System Programming/hw05/exe)
+==20431==  Address 0x59f2108 is 0 bytes after a block of size 8 alloc'd
+==20431==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20431==    by 0x1090C5: main (in /home/gurol/Documents/Lessons/System Programming/hw05/exe)
+==20431== 
+--20431-- REDIR: 0x578fab0 (libc.so.6:__mempcpy_avx_unaligned_erms) redirected to 0x4c37130 (mempcpy)
+--20431-- REDIR: 0x576ad60 (libc.so.6:__strcmp_ssse3) redirected to 0x4c33da0 (strcmp)
+--20431-- REDIR: 0x578b420 (libc.so.6:__memchr_avx2) redirected to 0x4c33f80 (memchr)
+--20431-- REDIR: 0x578fad0 (libc.so.6:__memcpy_avx_unaligned_erms) redirected to 0x4c366e0 (memmove)
+--20431-- REDIR: 0x578b300 (libc.so.6:__strspn_sse42) redirected to 0x4c37990 (strspn)
+--20431-- REDIR: 0x578b070 (libc.so.6:__strcspn_sse42) redirected to 0x4c378d0 (strcspn)
+--20431-- REDIR: 0x5698950 (libc.so.6:free) redirected to 0x4c30cd0 (free)
+==20431== 
+==20431== HEAP SUMMARY:
+==20431==     in use at exit: 336 bytes in 25 blocks
+==20431==   total heap usage: 60 allocs, 35 frees, 14,352 bytes allocated
+==20431== 
+==20431== Searching for pointers to 25 not-freed blocks
+==20431== Checked 95,656 bytes
+==20431== 
+==20431== 28 bytes in 7 blocks are definitely lost in loss record 1 of 4
+==20431==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20431==    by 0x10A556: ThreadFlorist2 (in /home/gurol/Documents/Lessons/System Programming/hw05/exe)
+==20431==    by 0x53E96DA: start_thread (pthread_create.c:463)
+==20431==    by 0x572288E: clone (clone.S:95)
+==20431== 
+==20431== 28 bytes in 7 blocks are definitely lost in loss record 2 of 4
+==20431==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20431==    by 0x10A732: ThreadFlorist3 (in /home/gurol/Documents/Lessons/System Programming/hw05/exe)
+==20431==    by 0x53E96DA: start_thread (pthread_create.c:463)
+==20431==    by 0x572288E: clone (clone.S:95)
+==20431== 
+==20431== 40 bytes in 10 blocks are definitely lost in loss record 3 of 4
+==20431==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20431==    by 0x10A382: ThreadFlorist1 (in /home/gurol/Documents/Lessons/System Programming/hw05/exe)
+==20431==    by 0x53E96DA: start_thread (pthread_create.c:463)
+==20431==    by 0x572288E: clone (clone.S:95)
+==20431== 
+==20431== 240 bytes in 1 blocks are still reachable in loss record 4 of 4
+==20431==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20431==    by 0x1091CA: main (in /home/gurol/Documents/Lessons/System Programming/hw05/exe)
+==20431== 
+==20431== LEAK SUMMARY:
+==20431==    definitely lost: 96 bytes in 24 blocks
+==20431==    indirectly lost: 0 bytes in 0 blocks
+==20431==      possibly lost: 0 bytes in 0 blocks
+==20431==    still reachable: 240 bytes in 1 blocks
+==20431==         suppressed: 0 bytes in 0 blocks
+==20431== 
+==20431== ERROR SUMMARY: 6 errors from 6 contexts (suppressed: 0 from 0)
+==20431== 
+==20431== 1 errors in context 1 of 6:
+==20431== Invalid read of size 1
+==20431==    at 0x4C32D04: strlen (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20431==    by 0x565E4D2: vfprintf (vfprintf.c:1643)
+==20431==    by 0x5665E53: fprintf (fprintf.c:32)
+==20431==    by 0x109289: main (in /home/gurol/Documents/Lessons/System Programming/hw05/exe)
+==20431==  Address 0x59f2108 is 0 bytes after a block of size 8 alloc'd
+==20431==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20431==    by 0x1090C5: main (in /home/gurol/Documents/Lessons/System Programming/hw05/exe)
+==20431== 
+==20431== 
+==20431== 1 errors in context 2 of 6:
+==20431== Syscall param openat(filename) points to unaddressable byte(s)
+==20431==    at 0x5710C8E: open (open64.c:47)
+==20431==    by 0x568D589: _IO_file_open (fileops.c:189)
+==20431==    by 0x568D589: _IO_file_fopen@@GLIBC_2.2.5 (fileops.c:281)
+==20431==    by 0x567FEA9: __fopen_internal (iofopen.c:78)
+==20431==    by 0x567FEA9: fopen@@GLIBC_2.2.5 (iofopen.c:89)
+==20431==    by 0x10916D: main (in /home/gurol/Documents/Lessons/System Programming/hw05/exe)
+==20431==  Address 0x59f2108 is 0 bytes after a block of size 8 alloc'd
+==20431==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20431==    by 0x1090C5: main (in /home/gurol/Documents/Lessons/System Programming/hw05/exe)
+==20431== 
+==20431== 
+==20431== 1 errors in context 3 of 6:
+==20431== Invalid write of size 1
+==20431==    at 0x4C32E0D: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20431==    by 0x1090EC: main (in /home/gurol/Documents/Lessons/System Programming/hw05/exe)
+==20431==  Address 0x59f2108 is 0 bytes after a block of size 8 alloc'd
+==20431==    at 0x4C31B25: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20431==    by 0x1090C5: main (in /home/gurol/Documents/Lessons/System Programming/hw05/exe)
+==20431== 
+==20431== ERROR SUMMARY: 6 errors from 6 contexts (suppressed: 0 from 0)

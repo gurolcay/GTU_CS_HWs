@@ -1,0 +1,6 @@
+.DS_Store
+Slayts/
+*.pdf
+sample_exams/
+*.log
+*.tar.gz

@@ -1,0 +1,2 @@
+bookName,author,yearOfPrinting,barrowStatus,bookID,nameOfBorrower
+test,test,1324,true,0,gurol

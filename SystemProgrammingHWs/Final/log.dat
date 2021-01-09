@@ -1,0 +1,21 @@
+Server port number: 5555
+server IP address: 127.0.0.1
+Server start with these parameters: 
+./server 5555 data.dat log.datLogs keep at log.dat
+7 provider threads created
+Name 		Performance	Price		Duration
+Ayse		5		900		60
+Fatma		3		500		180
+Murat		2		200		360
+Hakan		4		750		240
+Cengiz		1		75		600
+Nuray		3		450		90
+Ertan		4		600		120
+Provider Fatma is waiting for a task
+Provider Murat is waiting for a task
+Provider Ayse is waiting for a task
+Provider Hakan is waiting for a task
+Provider Cengiz is waiting for a task
+Provider Nuray is waiting for a task
+Provider Ertan is waiting for a task
+Catched SIGINT signal. Exiting the program... 

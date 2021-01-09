@@ -1,0 +1,3 @@
+/home/gurol/Documents/Lessons/System Programming/Final/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/gurol/Documents/Lessons/System Programming/Final/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/gurol/Documents/Lessons/System Programming/Final/cmake-build-debug/CMakeFiles/Final.dir

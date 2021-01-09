@@ -1,0 +1,5 @@
+*.o
+/timerServer
+/showResults
+/seeWhat
+*.pdf
